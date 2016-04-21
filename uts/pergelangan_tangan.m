@@ -24,7 +24,7 @@ for z = 1:length(namafile)
 
     gray=(0.299*R)+(0.586*G)+(0.114*B);
     %gray=(0.333*R)+(0.333*G)+(0.333*B);
-    %figure, imshow(gray);
+    figure, imshow(gray);
     %imwrite(gray, [sdirectory '/', ['gray_', namafile(z).name]]);
 
 	%(double) sqrt trouble
@@ -54,7 +54,7 @@ for z = 1:length(namafile)
             W(x,y)=B(x,y);
         end
     end
-    %figure, imshow(W);    
+    figure, imshow(W);    
     W=uint8(W);
     [o p]=size(W);
 
@@ -78,7 +78,7 @@ for z = 1:length(namafile)
         end
     end
     D;
-    %figure, plot(D);
+    figure, plot(D);
     
     [a b]=size(D);
     t=[1:c];    
