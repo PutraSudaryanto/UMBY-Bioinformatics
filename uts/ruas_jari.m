@@ -106,17 +106,30 @@ x=(double(UJI))';
 [c d]=size(m2);
 [c d]=size(x);
 
-x11=x-m1;
-x1=x11'*x11;
-xw1=abs(sqrt(x1));
+x11=(x-m1);
+x1=x11'*x11
+xx11=(x-m1).^2;
+xx1=sum(xx11)
+xw1=sqrt(abs(x1))
+xxw1=sqrt(abs(xx1))
 
-x12=x-m2;
-x2=x12'*x12;
-xw2=abs(sqrt(x2));
+x12=(x-m2);
+x2=x12'*x12
+xx12=(x-m2).^2;
+xx2=sum(xx12)
+xw2=sqrt(abs(x2))
+xxw2=sqrt(abs(xx2))
 
 if (xw1 < xw2)
     disp('uji, masuk dalam kelas 1');
 else
     disp('uji, masuk dalam kelas 2');
 end
+
+if (xxw1 < xxw2)
+    disp('uji, masuk dalam kelas 1');
+else
+    disp('uji, masuk dalam kelas 2');
+end
+
 
