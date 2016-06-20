@@ -29,7 +29,7 @@ for z = 1:length(namafile)
     %figure, imshow(gray);
     imwrite(gray, [sdirectory '/', ['gray_', namafile(z).name]]);
     
-    Ro = sobel(gray);
+    Ro = roberts(gray);
     imwrite(Ro, [sdirectory '/', ['roberts_', namafile(z).name]]);
     
     So = sobel(gray);
@@ -38,10 +38,10 @@ for z = 1:length(namafile)
     Pw = prewitt(gray);
     imwrite(Pw, [sdirectory '/', ['prewitt_', namafile(z).name]]);
     
-    Fr = prewitt(gray);
+    Fr = freichen(gray);
     imwrite(Fr, [sdirectory '/', ['freichen_', namafile(z).name]]);
     
-    Ko = prewitt(gray);
+    Ko = kompas(gray);
     imwrite(Ko, [sdirectory '/', ['kompas_', namafile(z).name]]);
     
     [o p]=size(Pw);
