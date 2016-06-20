@@ -29,20 +29,20 @@ for z = 1:length(namafile)
     %figure, imshow(gray);
     imwrite(gray, [sdirectory '/', ['gray_', namafile(z).name]]);
     
-    %Ro = sobel(gray);
-    %imwrite(Ro, [sdirectory '/', ['roberts_', namafile(z).name]]);
+    Ro = sobel(gray);
+    imwrite(Ro, [sdirectory '/', ['roberts_', namafile(z).name]]);
     
-    %So = sobel(gray);
-    %imwrite(So, [sdirectory '/', ['sobel_', namafile(z).name]]);
+    So = sobel(gray);
+    imwrite(So, [sdirectory '/', ['sobel_', namafile(z).name]]);
     
     Pw = prewitt(gray);
     imwrite(Pw, [sdirectory '/', ['prewitt_', namafile(z).name]]);
     
-    %Fr = prewitt(gray);
-    %imwrite(Fr, [sdirectory '/', ['freichen_', namafile(z).name]]);
+    Fr = prewitt(gray);
+    imwrite(Fr, [sdirectory '/', ['freichen_', namafile(z).name]]);
     
-    %Ko = prewitt(gray);
-    %imwrite(Ko, [sdirectory '/', ['kompas_', namafile(z).name]]);
+    Ko = prewitt(gray);
+    imwrite(Ko, [sdirectory '/', ['kompas_', namafile(z).name]]);
     
     [o p]=size(Pw);
 
@@ -118,4 +118,3 @@ if (zz11 < zz21)
 else
     disp('uji, masuk dalam kelas 2');
 end
-
